@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Updating to a PHP release containing the patch to this vulnerability is the only complete mitigation.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Updating to a release containing the complete state reset patch is the only reliable mitigation.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://www.php.net/index.php",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35.",
+          "added": "2026-10-25"
+        },
+        {
+          "text": "We suggest you set session.upload_progress.enabled=0 until the next regular bugfix release, to fully protect from an unlikely RCE vector.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://www.php.net/archive/2026.php",
+      "title": "",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": 5,
+      "url": "https://www.wiz.io/blog/php2shell-php-rce",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "August 19, 2026: Wiz Research discovers the first PHP vulnerability using Wiz Atlas, Gemini 4 Argon, and GPT-5.6 Sol.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "On October 21st at 07:41 UTC, more than six hours before the coordinated release, Chainguard unilaterally broke the embargo and published built images containing the fix.",
+          "added": "2026-10-25"
+        },
+        {
+          "text": "They came with a wrong release time and a wrong CVSS score of 10.0 (the actual score is 9.2).",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://daubois.dev/blog/cve-2026-109618-php2shell-rumors",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "The score comes first.",
+          "added": "2026-10-25"
+        },
+        {
+          "text": "session.upload_progress.enabled = Off was the most repeated advice, and it belongs to the other bug.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "While CISA has not observed successful exploitation of these vulnerabilities in the wild as of the time of publication, they pose a risk to organizations if left unpatched.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://cert.europa.eu/publications/security-advisories/2026-018",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "The PHP team released the fixes today , 21 October 2026 at 13:30 UTC, in PHP versions 8.5.12, 8.4.27, 8.3.36 and 8.2.35",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure of CVE-2026-109618 and CVE-2026-109619.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://ellio.tech/en/blog/php2shell-what-we-observed-and-what-to-do",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "The first PHP2Shell request reached ELLIO sensors at 08:36 UTC, five and a half hours before the fix was public.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://www.vulncheck.com/blog/php2shell-vulnerabilities",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Our initial exploit leveraged a VulnCheck-discovered memory leak chained into RCE on PHP 8.4.26 on x86-64 platforms with ASLR enabled and display_errors=off , the recommended production configuration.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://watchtowr.com/intelligence/php-cve-2026-109618-faq",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Exploitation has been observed in the wild since October 21, 2026, through watchTowr’s Attacker Eye global honeypot network.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Calif identified a critical flaw using GPT‑5.6 Sol as part of our Patch the Planet",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://calif.io/php2shell",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "No special harness, or access to models that weren't generally available to everyone were used in the initial bug discovery.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://modat.io/blog/php-exposure-before-the-21-oct-2026-security-release",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Modat scan data from the day before shows 4.4 million internet-facing PHP services, and about 79% of those with a known version run a branch that PHP no longer supports",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://blog.qualys.com/vulnerabilities-threat-research/2026/10/20/php-announces-critical-security-release-for-two-vulnerabilities",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "44 million (28%) run supported branches, PHP 8.2 to 8.5.",
+          "added": "2026-10-25"
+        },
+        {
+          "text": "110 million (71%) run end-of-life or end-of-support versions of PHP, from 5.4 to 8.1.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Even so, no successful in-the-wild compromise has been confirmed so far.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-protects-customers-from-php-rce-zero-days",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "both vulnerabilities carry a CVSS 4.0 score of 9.2 (Critical) and are classified as CWE-824: Access of Uninitialized Pointer",
+          "added": "2026-10-25"
+        },
+        {
+          "text": "on ARM-based hosts, which are increasingly common in cloud fleets, defeated Address Space Layout Randomization (ASLR) using only HTTP requests.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://www.covertswarm.com/post/php2shell-moving-beyond-a-lab-proof-of-concept-to-code-execution-with-aslr-enabled",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "The ASLR-enabled, error-display-disabled result applies to the AArch64 Apache and mod_php environment described above.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://w3techs.com/technologies/details/pl-php",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "PHP is used by 69.2% of all the websites whose server-side programming language we know.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "url": "https://www.php.net/supported-versions.php",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Each release branch of PHP is fully supported for two years from its initial stable release.",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "title": "",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": 24,
+      "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "the first PHP2Shell request targeting its sensors was observed on October 21, 2026, at 8:36 a.m. UTC, less than an hour after",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "url": "https://github.com/deepfield/public-research/blob/main/potassium/report.md",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "Potassium is a Mirai-derived DDoS botnet",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "url": "https://www.php2shell.com",
+      "title": "",
+      "accessed": "2026-10-25",
+      "quotes": [
+        {
+          "text": "PHP powers approximately 70% of websites",
+          "added": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109618",
+      "title": "",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": 28,
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109619",
+      "title": "",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": 29,
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115560",
+      "title": "",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": 30,
+      "url": "https://www.php.net/eol.php",
+      "title": "",
+      "accessed": "2026-10-25"
+    }
+  ]
+}
