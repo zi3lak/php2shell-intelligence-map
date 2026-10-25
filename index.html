@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070d">
+  <meta name="description" content="Bilingual EN/PL PHP2Shell intelligence map: timeline, Zend request-lifecycle mechanics, global exposure, IOC intelligence and a four-stage response playbook.">
+  <meta property="og:title" content="PHP2Shell — Intelligence Map">
+  <meta property="og:description" content="A bilingual cinematic reconstruction of the PHP2Shell runtime crisis.">
+  <meta property="og:type" content="website">
+  <title>PHP2Shell — Intelligence Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="space" aria-hidden="true"></canvas>
+  <div class="scanline" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar" id="top">
+    <a class="brand" href="#overview" aria-label="PHP2Shell home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span><b>PHP2SHELL</b><small>INTELLIGENCE MAP</small></span>
+    </a>
+    <nav id="nav" aria-label="Primary navigation"></nav>
+    <div class="top-actions">
+      <button class="lang-switch" id="langToggle" type="button" aria-label="Switch language"><span>EN</span><i></i><span>PL</span></button>
+      <button class="sound" id="soundToggle" type="button" aria-label="Toggle ambient sound"><span class="bars"><i></i><i></i><i></i><i></i></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="overview" data-section="overview">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+          <h1><span class="hero-title" data-i18n="hero.title"></span><span class="hero-sub" data-i18n="hero.subtitle"></span></h1>
+          <p class="hero-lead" data-i18n="hero.lead"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#timeline"><span data-i18n="hero.cta"></span><b>↘</b></a>
+            <button class="btn btn-ghost" id="openFilm" type="button"><span class="play">▶</span><span data-i18n="hero.secondary"></span></button>
+          </div>
+          <div class="hero-attribution"><span data-i18n="ui.researchBy"></span><b data-i18n="ui.researchByValue"></b><i></i><span data-i18n="ui.builtBy"></span><b data-i18n="ui.builtByValue"></b></div>
+          <div class="hero-meta">
+            <div><strong>2</strong><span data-i18n="hero.meta1"></span></div>
+            <div><strong>9.2</strong><span data-i18n="hero.meta2"></span></div>
+            <div><strong>4</strong><span data-i18n="hero.meta3"></span></div>
+            <div><strong>EN · PL</strong><span data-i18n="hero.meta4"></span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Animated representation of the PHP2Shell request lifecycle">
+          <div class="core-orbit">
+            <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+            <div class="core"><span>PHP</span><b>2</b><small>SHELL</small><i id="corePulse"></i></div>
+            <div class="orbit-tag tag-a"><i class="dot red"></i>CVE-2026-109618</div>
+            <div class="orbit-tag tag-b"><i class="dot amber"></i>CVE-2026-109619</div>
+            <div class="orbit-tag tag-c"><i class="dot cyan"></i>CVE-2026-115560</div>
+          </div>
+          <div class="hero-readout">
+            <span>REQUEST / WORKER BOUNDARY</span>
+            <div class="readout-line"><i></i><i></i><i></i><i></i><i></i></div>
+            <b>HEAP STATE <span id="heapState">MUTABLE</span></b>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#summary"><span></span>SCROLL TO DECONSTRUCT</a>
+    </section>
+
+    <section class="summary section" id="summary">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="summary.eyebrow"></p>
+        <h2 data-i18n="summary.title"></h2>
+        <p data-i18n="summary.body"></p>
+        <div class="verdict"><span>!</span><p data-i18n="summary.note"></p></div>
+      </div>
+      <div class="phase-grid" id="phaseGrid"></div>
+    </section>
+
+    <section class="film-section" id="film">
+      <canvas id="filmCanvas" aria-label="Cinematic PHP2Shell animation"></canvas>
+      <div class="film-caption">
+        <span>HERMES AGENT · CINEMATIC BRIEF</span>
+        <p id="filmText"></p>
+      </div>
+      <button class="film-close" id="closeFilm" type="button" aria-label="Close cinematic brief">×</button>
+    </section>
+
+    <section class="timeline section" id="timeline">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="timeline.eyebrow"></p>
+        <h2 data-i18n="timeline.title"></h2>
+        <p data-i18n="timeline.intro"></p>
+      </div>
+      <div class="timeline-controls" id="timelineControls"></div>
+      <div class="timeline-shell">
+        <div class="timeline-rail"><i id="timelineProgress"></i></div>
+        <div class="timeline-list" id="timelineList"></div>
+      </div>
+    </section>
+
+    <section class="mechanism section" id="mechanism">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="mechanism.eyebrow"></p>
+        <h2 data-i18n="mechanism.title"></h2>
+        <p data-i18n="mechanism.intro"></p>
+      </div>
+      <div class="cve-split">
+        <article class="cve-card reveal" data-cve="109618">
+          <div class="cve-index">01</div><div class="cve-score">9.2</div>
+          <h3 data-i18n="mechanism.cve1"></h3><p data-i18n="mechanism.cve1s"></p>
+          <div class="cve-tags"><span>CVSS 4.0 · 9.2</span><span>NVD CVSS 3.1 · 9.8</span><span>CWE-416</span><span>CWE-824</span></div>
+        </article>
+        <article class="cve-card reveal" data-cve="109619">
+          <div class="cve-index">02</div><div class="cve-score">9.2</div>
+          <h3 data-i18n="mechanism.cve2"></h3><p data-i18n="mechanism.cve2s"></p>
+          <div class="cve-tags"><span>CVSS 4.0 · 9.2</span><span>NVD CVSS 3.1 · 8.1</span><span>CWE-416</span><span>CWE-824</span></div>
+        </article>
+      </div>
+      <div class="flow-map reveal" id="flowMap">
+        <div class="flow-boundary"><span data-i18n="mechanism.boundary"></span></div>
+        <div class="flow-node n-parser"><span class="flow-icon">≋</span><b data-i18n="mechanism.parser"></b><small data-i18n="mechanism.parserNote"></small></div>
+        <div class="flow-node n-heap"><span class="flow-icon">▦</span><b data-i18n="mechanism.heap"></b><small data-i18n="mechanism.heapNote"></small></div>
+        <div class="flow-node n-bailout"><span class="flow-icon">↯</span><b data-i18n="mechanism.bailout"></b><small data-i18n="mechanism.bailoutNote"></small></div>
+        <div class="flow-node n-cleanup"><span class="flow-icon">⌁</span><b data-i18n="mechanism.cleanup"></b><small data-i18n="mechanism.cleanupNote"></small></div>
+        <div class="flow-node n-worker"><span class="flow-icon">◉</span><b data-i18n="mechanism.worker"></b><small data-i18n="mechanism.workerNote"></small></div>
+        <div class="flow-node n-auth"><span class="flow-icon">◇</span><b data-i18n="mechanism.auth"></b><small data-i18n="mechanism.authNote"></small></div>
+        <div class="flow-node n-app"><span class="flow-icon"></span><b data-i18n="mechanism.app"></b><small data-i18n="mechanism.appNote"></small></div>
+        <svg class="flow-lines" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M140 150 C250 150 260 235 370 235"/><path d="M470 235 C545 235 555 235 630 235"/>
+          <path d="M730 235 C805 235 815 145 900 145"/><path d="M730 235 C805 235 815 335 900 335"/>
+          <path d="M140 150 C90 150 90 450 410 450"/><path d="M470 450 C520 450 520 235 630 235"/>
+        </svg>
+      </div>
+      <div class="contract reveal"><span data-i18n="mechanism.contract"></span><p data-i18n="mechanism.contractText"></p><i>STATE → FAILURE → TRUST → IMPACT</i></div>
+      <p class="mechanism-legend reveal" data-i18n="mechanism.legend"></p>
+      <div class="detail-heading reveal"><p class="eyebrow">01 / 03</p><h3 id="primitiveTitle"></h3><p id="primitiveIntro"></p></div>
+      <div class="primitive-grid" id="primitiveGrid"></div>
+      <div class="detail-heading reveal"><p class="eyebrow">02 / 03</p><h3 id="vectorsTitle"></h3><p id="vectorsIntro"></p></div>
+      <div class="vector-grid">
+        <article class="vector-card reveal"><span>01</span><h4 id="v1title"></h4><p id="v1text"></p><code>post_max_size × decoded multipart</code></article>
+        <article class="vector-card reveal"><span>02</span><h4 id="v2title"></h4><p id="v2text"></p><code>empty file controls × nested keys</code></article>
+      </div>
+      <div class="detail-heading reveal"><p class="eyebrow">03 / 03</p><h3 id="assetsTitle"></h3><p id="assetsIntro"></p></div>
+      <div class="asset-grid" id="assetGrid"></div>
+      <div class="sapi-grid">
+        <article class="sapi-card reveal"><div class="sapi-top"><span>01</span><i class="risk critical"></i></div><h3 data-i18n="sapi.mod"></h3><b data-i18n="sapi.mods"></b><p data-i18n="sapi.modd"></p><code>mod_php</code></article>
+        <article class="sapi-card reveal"><div class="sapi-top"><span>02</span><i class="risk conditional"></i></div><h3 data-i18n="sapi.fpm"></h3><b data-i18n="sapi.fpms"></b><p data-i18n="sapi.fpmd"></p><code>php-fpm</code></article>
+        <article class="sapi-card reveal"><div class="sapi-top"><span>03</span><i class="risk variable"></i></div><h3 data-i18n="sapi.others"></h3><b>CONDITIONAL / SAPI-SPECIFIC</b><p data-i18n="sapi.othersd"></p><code>php-cgi · frankenphp · litespeed</code></article>
+      </div>
+    </section>
+
+    <section class="exposure section" id="exposure">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="exposure.eyebrow"></p>
+        <h2 data-i18n="exposure.title"></h2>
+        <p data-i18n="exposure.intro"></p>
+      </div>
+      <div class="exposure-grid">
+        <article class="exposure-card reveal"><span class="chart-type m"></span><div class="bignum"><b data-count="4.38">0</b><small>M</small></div><h3 data-i18n="exposure.modat"></h3><p data-i18n="exposure.modatd"></p><div class="bar"><i style="--w:79%"></i></div><span class="bar-label m"></span></article>
+        <article class="exposure-card reveal"><span class="chart-type v"></span><div class="bignum"><b data-count="2.61">0</b><small>M</small></div><h3 data-i18n="exposure.vul"></h3><p data-i18n="exposure.vuld"></p><div class="split-bar"><i style="--w:43%"></i><i style="--w:57%"></i></div><span class="bar-label v"></span></article>
+        <article class="exposure-card reveal"><span class="chart-type c"></span><div class="bignum"><b data-count="56.6">0</b><small>M</small></div><h3 data-i18n="exposure.censys"></h3><p data-i18n="exposure.censysd"></p><div class="radar" aria-hidden="true"><i></i><i></i><i></i><b></b></div></article>
+      </div>
+      <div class="exposure-verdict reveal"><div><span data-i18n="exposure.verdict"></span><p data-i18n="exposure.verdictd"></p></div><aside><b>31 DEC 2026</b><p data-i18n="exposure.eold"></p></aside></div>
+      <div class="version-map reveal"><div class="detail-heading"><p class="eyebrow">VERSION CONTROL</p><h3 id="versionsTitle"></h3><p id="versionsIntro"></p></div><div class="version-grid" id="versionGrid"></div></div>
+      <div class="potassium reveal">
+        <div class="potassium-copy"><p class="eyebrow" data-i18n="potassium.eyebrow"></p><h3 data-i18n="potassium.title"></h3><p data-i18n="potassium.intro"></p>
+          <div class="ioc-warning"><b>!</b><div><span data-i18n="potassium.warn"></span><p data-i18n="potassium.warnd"></p></div></div>
+        </div>
+        <div class="attack-chain" id="attackChain">
+          <div class="chain-node"><i>01</i><b data-i18n="potassium.chain"></b><span>SCAN / SPRAY</span></div><em>→</em>
+          <div class="chain-node"><i>02</i><b data-i18n="potassium.loader"></b><span>92.118.112[.]100</span></div><em>→</em>
+          <div class="chain-node"><i>03</i><b data-i18n="potassium.c2"></b><span>TCP 50792</span></div><em>→</em>
+          <div class="chain-node"><i>04</i><b data-i18n="potassium.flood"></b><span>UDP / TCP / ICMP</span></div>
+        </div>
+        <div class="ioc-grid" id="iocGrid"></div>
+      </div>
+    </section>
+
+    <section class="response section" id="response">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="response.eyebrow"></p>
+        <h2 data-i18n="response.title"></h2>
+        <p data-i18n="response.intro"></p>
+      </div>
+      <div class="response-steps">
+        <article class="response-step reveal"><div class="step-number">01</div><h3 data-i18n="response.s1"></h3><p data-i18n="response.s1d"></p><div class="step-art art-memory"><i></i><i></i><i></i><b>RAM</b></div></article>
+        <article class="response-step reveal"><div class="step-number">02</div><h3 data-i18n="response.s2"></h3><p data-i18n="response.s2d"></p><div class="step-art art-update"><i>8.5.12</i><i>8.4.27</i><i>8.3.36</i><i>8.2.35</i></div></article>
+        <article class="response-step reveal"><div class="step-number">03</div><h3 data-i18n="response.s3"></h3><p data-i18n="response.s3d"></p><div class="step-art art-config"><code>upload_progress=0</code><code>backtraces=0</code><code>RLIMIT ✕</code></div></article>
+        <article class="response-step reveal"><div class="step-number">04</div><h3 data-i18n="response.s4"></h3><p data-i18n="response.s4d"></p><div class="step-art art-hunt"><i></i><i></i><i></i><i></i><b>HUNT</b></div></article>      </div>
+      <div class="matrix-wrap reveal"><div class="matrix-head"><h3 data-i18n="response.matrix"></h3><span>PATCH FIRST · WORKAROUNDS SECOND</span></div><div class="matrix-scroll"><table><thead><tr><th data-i18n="response.directive"></th><th data-i18n="response.value"></th><th data-i18n="response.why"></th><th data-i18n="response.caveat"></th></tr></thead><tbody id="matrixBody"></tbody></table></div></div>
+      <div class="findings-grid">
+        <article class="finding reveal"><span>01</span><h3 data-i18n="findings.f1"></h3><p data-i18n="findings.f1d"></p></article>
+        <article class="finding reveal"><span>02</span><h3 data-i18n="findings.f2"></h3><p data-i18n="findings.f2d"></p></article>
+        <article class="finding reveal"><span>03</span><h3 data-i18n="findings.f3"></h3><p data-i18n="findings.f4"></p></article>
+        <article class="finding reveal"><span>04</span><h3 data-i18n="findings.f4"></h3><p data-i18n="findings.f4d"></p></article>
+      </div>
+    </section>
+
+    <section class="sources section" id="sources">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="sources.eyebrow"></p>
+        <h2 data-i18n="sources.title"></h2>
+        <p data-i18n="sources.intro"></p>
+      </div>
+      <div class="source-list" id="sourceList"></div>
+      <div class="version-note reveal"><span data-i18n="sources.version"></span><p data-i18n="sources.versiond"></p></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><b>PHP2SHELL</b></div>
+    <p data-i18n="attribution"></p>
+    <a href="#top" data-i18n="common.back"></a>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="data/content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
