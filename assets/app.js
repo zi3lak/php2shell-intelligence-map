@@ -168,6 +168,9 @@
     function resize(){c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;c.style.width=innerWidth+"px";c.style.height=innerHeight+"px";}
     function draw(now){
       if(!active)return; const t=(now-start)/1000, dur=6.2, idx=Math.min(chapters.length-1,Math.floor(t/dur)), local=(t%dur)/dur;
+      const chapterText = chapters[idx][1];
+      const caption = $("#filmText");
+      if (caption && caption.textContent !== chapterText) caption.textContent = chapterText;
       ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0); const W=innerWidth,H=innerHeight;
       ctx.fillStyle="#020408";ctx.fillRect(0,0,W,H);
       const g=ctx.createRadialGradient(W*.58,H*.45,0,W*.58,H*.45,W*.6);g.addColorStop(0,`rgba(83,217,255,${.12*(1-local)})`);g.addColorStop(1,"transparent");ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
@@ -179,8 +182,7 @@
       ctx.fillStyle="#53d9ff";ctx.font="600 13px 'DM Mono'";ctx.textAlign="center";ctx.fillText("LONGJMP",W*.58,H*.45+4);
       // chapter title
       ctx.textAlign="left";ctx.fillStyle="#53d9ff";ctx.font="500 11px 'DM Mono'";ctx.fillText(chapters[idx][0],clamp((1-local)*50,20,W-340),H*.2);
-      ctx.fillStyle="#eef3fb";ctx.font=`600 ${Math.min(38,innerWidth*.042)}px 'Space Grotesk'`;wrapText(ctx,chapters[idx][1],clamp((1-local)*50,20,W-380),H*.27,Math.min(720,W-400),48);
-      $("#filmText").textContent = chapters[idx][1];
+      ctx.fillStyle="#eef3fb";ctx.font=`600 ${Math.min(38,innerWidth*.042)}px 'Space Grotesk'`;wrapText(ctx,chapterText,clamp((1-local)*50,20,W-380),H*.27,Math.min(720,W-400),48);
       // progress
       const p=(idx+local)/chapters.length;ctx.fillStyle="rgba(255,255,255,.08)";ctx.fillRect(30,H-70,W-60,1);ctx.fillStyle="#53d9ff";ctx.fillRect(30,H-70,(W-60)*p,1);
       if(t>=chapters.length*dur){start=performance.now();}
